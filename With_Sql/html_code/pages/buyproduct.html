@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% extends "base/base.html" %}
+{% load static %}
+{% block body_block %}
+<link rel="stylesheet" href="{% static 'css/all.css' %}">
+<link rel="stylesheet" href="{% static 'css/form.css' %}">
+<title>BuyProduct low cost | django Pratice with Sql Database</title>
+<section class="about">
+  <h1>Well-come To With_SQL</h1>
+  <h3>Buy Product Now Here . Input Product Name And Buy Date</h3>
+
+</section>
+<section>
+    <div class="form">
+      <form class="" action="" method="POST">
+            {{ buyproduct }}
+            {% csrf_token %}
+            <input type="submit" name="submit" value="Buy Now">
+      </form>
+    </div>
+</section>
+{% endblock %}

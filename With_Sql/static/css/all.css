@@ -1,0 +1,11 @@
+h1{
+  text-align: center;
+  text-decoration: underline;
+  color: green;
+}
+section h3{
+  text-align: center;
+}
+.about{
+  padding: 40px 0px;
+}

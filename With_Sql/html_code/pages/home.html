@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+{% extends "base/base.html" %}
+{% load static %}
+{% block body_block %}
+<link rel="stylesheet" href="{% static 'css/all.css' %}">
+<title>Home | django Pratice with Sql Database</title>
+<section class="about">
+  <h1>Well-come To With_SQL</h1>
+  <h3>Hello! This Is HOME Page. Visit Our Other Page</h3>
+
+</section>
+<section>
+   {% for all in user_details %}
+   <h4><a href="{% url 'user_details' regid=all.id %}">{{ all.frist_name }} {{ all.last_name }}</a></h4>
+   {% endfor %}
+</section>
+{% endblock %}

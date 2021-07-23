@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% extends "base/base.html" %}
+{% load static %}
+{% block body_block %}
+<link rel="stylesheet" href="{% static 'css/form.css' %}">
+<title>Registration New User | django Pratice with Sql Database</title>
+
+<table>
+  <tr class="head">
+    <td>User Name</td>
+    <td>Full Name</td>
+    <td>Email_Address                  ..</td>
+    <td>Phone Nambar</td>
+    <td>Road Namber</td>
+    <td>Country </td>
+    <td>Id Namber</td>
+  </tr>
+  {% for all in users %}
+  <tr>
+    <td>{{ all.user_name }}</td>
+    <td>{{ all.frist_name }} {{ all.last_name }}</td>
+    <td>{{ all.email_address }}</td>
+    <td>{{ all.phone_no }}</td>
+    <td>{{ all.road_no }}</td>
+    <td>{{ all.country }}</td>
+    <td>{{ all.id|add:"17685465" }}</td>
+  </tr>
+
+  {% endfor %}
+</table>
+{% endblock %}

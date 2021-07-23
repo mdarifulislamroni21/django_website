@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% extends "base/base.html" %}
+{% load static %}
+{% block body_block %}
+<link rel="stylesheet" href="{% static 'css/all.css' %}">
+<title>Edid Product Info | django Pratice with Sql Database</title>
+
+<section class="about">
+  <h1>Edid Product Info</h1>
+
+  {% if success %}
+  <div class="alert alert-success container" >
+  {{ success }}
+  </div>
+  {% endif %}
+
+</section>
+
+<form class="" action="" method="POST">
+     {{ edid_product.as_p }}
+     {% csrf_token %}
+     <input class="btn btn-info" type="submit" name="submit" value="Save">
+</form>
+
+<a href="{% url 'delete_product' product_pk=product_id %}" class="btn btn-danger mt-3">Delete</a>
+{% endblock %}

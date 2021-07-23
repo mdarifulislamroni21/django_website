@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+{% extends "base/base.html" %}
+{% load static %}
+{% block body_block %}
+<link rel="stylesheet" href="{% static 'css/all.css' %}">
+<title>About | django Pratice with Sql Database</title>
+
+<section class="about">
+  <h2><div class="alert alert-danger">
+      {{ delete_success }}
+
+  </div>
+</h2>
+</section>
+{% endblock %}

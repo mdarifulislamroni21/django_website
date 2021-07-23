@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+{% extends "base/base.html" %}
+{% load static %}
+{% block body_block %}
+<link rel="stylesheet" href="{% static 'css/form.css' %}">
+<title>Registration New User | django Pratice with Sql Database</title>
+
+<div class="form">
+  <form class="" action="" method="POST">
+    {{ registration }}
+    {% csrf_token %}
+    <input type="submit" class="button_form" name="" value="Register">
+
+  </form>
+</div>
+{% endblock %}
